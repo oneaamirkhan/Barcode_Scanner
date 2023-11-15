@@ -7,11 +7,29 @@
 
 import SwiftUI
 
-struct ScannerView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct ScannerView: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> ScannerVC {
+        ScannerVC(scanneerDelegate: context.coordinator)
+    }
+    
+    func updateUIViewController(_ uiViewController: ScannerVC, context: Context) {}
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator() 
+    }
+    
+    final class Coordinator: NSObject, ScannerVCDelegate{
+        func didFind(barcode: String) {
+            print(barcode)
+        }
+
+        func didSurface(error: CameraError) {
+            print(error.rawValue)
+        }
     }
 }
+
 
 #Preview {
     ScannerView()
