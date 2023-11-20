@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FDAD69C42B0B7BD50034674F /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAD69C32B0B7BD50034674F /* Alert.swift */; };
+		FDAD69C62B0B7C410034674F /* BarcodeScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAD69C52B0B7C410034674F /* BarcodeScannerViewModel.swift */; };
 		FDFC98982B0227F700592995 /* Barcode_ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC98972B0227F700592995 /* Barcode_ScannerApp.swift */; };
 		FDFC989A2B0227F700592995 /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC98992B0227F700592995 /* BarcodeScannerView.swift */; };
 		FDFC989C2B0227F800592995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFC989B2B0227F800592995 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FDAD69C32B0B7BD50034674F /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		FDAD69C52B0B7C410034674F /* BarcodeScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewModel.swift; sourceTree = "<group>"; };
 		FDFC98942B0227F700592995 /* Barcode_Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barcode_Scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFC98972B0227F700592995 /* Barcode_ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode_ScannerApp.swift; sourceTree = "<group>"; };
 		FDFC98992B0227F700592995 /* BarcodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FDAD69C72B0B7ECF0034674F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FDAD69C82B0B7ED90034674F /* BarcodeScanner */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FDAD69C82B0B7ED90034674F /* BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				FDFC98992B0227F700592995 /* BarcodeScannerView.swift */,
+				FDAD69C52B0B7C410034674F /* BarcodeScannerViewModel.swift */,
+			);
+			path = BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		FDAD69C92B0B7F1C0034674F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDAD69CA2B0B7F260034674F /* UIKitComponents */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDAD69CA2B0B7F260034674F /* UIKitComponents */ = {
+			isa = PBXGroup;
+			children = (
+				FDFC98C22B022BB000592995 /* ScannerVC.swift */,
+				FDFC98C42B0245AC00592995 /* ScannerView.swift */,
+			);
+			path = UIKitComponents;
+			sourceTree = "<group>";
+		};
+		FDAD69CB2B0B7F550034674F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FDAD69C32B0B7BD50034674F /* Alert.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		FDFC988B2B0227F700592995 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +145,13 @@
 		FDFC98962B0227F700592995 /* Barcode_Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				FDAD69CB2B0B7F550034674F /* Utilities */,
+				FDAD69C92B0B7F1C0034674F /* Views */,
+				FDAD69C72B0B7ECF0034674F /* Screens */,
 				FDFC98972B0227F700592995 /* Barcode_ScannerApp.swift */,
-				FDFC98992B0227F700592995 /* BarcodeScannerView.swift */,
 				FDFC989B2B0227F800592995 /* Assets.xcassets */,
 				FDFC989D2B0227F800592995 /* Barcode_Scanner.entitlements */,
 				FDFC989E2B0227F800592995 /* Preview Content */,
-				FDFC98C22B022BB000592995 /* ScannerVC.swift */,
-				FDFC98C42B0245AC00592995 /* ScannerView.swift */,
 			);
 			path = Barcode_Scanner;
 			sourceTree = "<group>";
@@ -265,9 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDAD69C62B0B7C410034674F /* BarcodeScannerViewModel.swift in Sources */,
 				FDFC98C32B022BB000592995 /* ScannerVC.swift in Sources */,
 				FDFC98C52B0245AC00592995 /* ScannerView.swift in Sources */,
 				FDFC989A2B0227F700592995 /* BarcodeScannerView.swift in Sources */,
+				FDAD69C42B0B7BD50034674F /* Alert.swift in Sources */,
 				FDFC98982B0227F700592995 /* Barcode_ScannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +405,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -412,7 +462,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -550,16 +602,17 @@
 				DEVELOPMENT_TEAM = 6A3JRSYMQT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan the barcodes.";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.8;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hardac.co.Barcode-ScannerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Barcode_Scanner;
 			};
 			name = Debug;
@@ -573,16 +626,17 @@
 				DEVELOPMENT_TEAM = 6A3JRSYMQT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan the barcodes.";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.8;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hardac.co.Barcode-ScannerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Barcode_Scanner;
 			};
 			name = Release;
